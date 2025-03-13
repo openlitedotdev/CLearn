@@ -7,11 +7,13 @@ export default defineNuxtConfig({
   eslint: {
     config: { standalone: false },
   },
+  css: ['@unocss/reset/tailwind.css'],
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
+    '@unocss/nuxt',
   ],
 })
