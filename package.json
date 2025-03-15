@@ -1,7 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "clearn",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.6.3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
