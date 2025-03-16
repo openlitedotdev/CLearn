@@ -20,4 +20,10 @@ You can then start the local development server with:
 pnpm run dev
 ```
 
-This will launch a browser window open to [localhost:3000](http://localhost:300)
+This will launch a browser window open to [localhost:3000](http://localhost:300).
+
+You can build the project with:
+
+```console
+pnpm run build
+```
