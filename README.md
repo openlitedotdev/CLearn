@@ -8,8 +8,16 @@
 
 ### Local development
 
-1. First step installation dependecies we have [pnpm](https://pnpm.io)
+First step installation dependecies we have [pnpm](https://pnpm.io)
 
 ```console
 pnpm install --frozen-lockfile
 ```
+
+You can then start the local development server with:
+
+```console
+pnpm run dev
+```
+
+This will launch a browser window open to [localhost:3000](http://localhost:300)
