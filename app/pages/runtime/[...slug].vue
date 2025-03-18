@@ -1,14 +1,21 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data } = await useAsyncData(() => queryCollection('runtime').path(`/runtime/${route.params.slug}`).first())
+const { data: page } = await useAsyncData(() =>
+  queryCollection('runtime').path(`/runtime/${route.params.slug}`).first(),
+)
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: false,
+  })
+}
+
+useSeoMeta(page.value.seo)
 </script>
 
 <template>
-  <section>
-    <ContentRenderer v-if="data" :value="data" />
-    <div v-else>
-      Home not found
-    </div>
-  </section>
+  <ContentRenderer v-if="page" :value="page" />
 </template>
