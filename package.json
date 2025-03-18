@@ -10,7 +10,8 @@
     "fmt": "eslint . --fix",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky"
   },
   "dependencies": {
     "@nuxt/content": "3.3.0",
@@ -24,10 +25,13 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@unocss/eslint-plugin": "^66.1.0-beta.3",
     "@unocss/nuxt": "66.1.0-beta.3",
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
+    "husky": "^9.1.7",
     "unocss": "66.1.0-beta.3"
   },
   "pnpm": {
