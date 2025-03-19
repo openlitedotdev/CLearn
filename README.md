@@ -27,3 +27,11 @@ You can build the project with:
 ```console
 pnpm run build
 ```
+
+### Issue Report
+
+[The issues of the CLearn project](https://github.com/openlitedotdev/community/issues?q=is%3Aissue%20state%3Aopen%20label%3ACLearn)
+
+### License
+
+[MIT](./LICENSE)
