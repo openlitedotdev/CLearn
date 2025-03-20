@@ -7,7 +7,11 @@ title: Getting started
 Contenido en ingles
 
 ```c [main.c]
+#include <stdio.h>
+
 int main() {
-   return (0);
+  printf("Hello, World");
+
+  return 0;
 }
 ```
