@@ -11,14 +11,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@nuxt/content": "3.3.0",
     "@nuxt/fonts": "0.11.0",
     "@nuxt/icon": "1.11.0",
     "@nuxt/image": "1.9.0",
-    "@nuxtjs/i18n": "^9.3.1",
+    "@nuxtjs/i18n": "9.3.1",
     "nuxt": "^3.16.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
@@ -32,17 +32,31 @@
     "@unocss/nuxt": "66.1.0-beta.3",
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
-    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "simple-git-hooks": "^2.11.1",
     "unocss": "66.1.0-beta.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "better-sqlite3",
-      "sharp"
-    ],
-    "ignoredBuiltDependencies": [
       "@parcel/watcher",
-      "esbuild"
+      "better-sqlite3",
+      "esbuild",
+      "sharp",
+      "simple-git-hooks"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "pnpm dlx commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,md,json}": [
+      "pnpm run lint"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
