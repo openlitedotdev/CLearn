@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@nuxt/content": "3.3.0",
@@ -32,17 +32,30 @@
     "@unocss/nuxt": "66.1.0-beta.3",
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
-    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "simple-git-hooks": "^2.11.1",
     "unocss": "66.1.0-beta.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3",
-      "sharp"
-    ],
-    "ignoredBuiltDependencies": [
+      "sharp",
       "@parcel/watcher",
       "esbuild"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md,json}": [
+      "pnpm run lint",
+      "pnpm dlx commitlint --edit"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
