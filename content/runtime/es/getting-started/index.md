@@ -2,9 +2,9 @@
 title: Getting started
 ---
 
-## Hello getting started
+## Hola getting started
 
-aaaa
+Contenido en español
 
 ```c [main.c]
 int main() {

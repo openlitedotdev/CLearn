@@ -2,6 +2,6 @@
 title: getting-started
 ---
 
-# Runtime folder
+# Carpeta runtime en español
 
 lorem ipsum dolor

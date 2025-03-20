@@ -1,9 +1,19 @@
 <script setup lang="ts">
-const route = useRoute()
+import type { Collections } from '@nuxt/content'
+import { withLeadingSlash } from 'ufo'
 
-const { data: page } = await useAsyncData(() =>
-  queryCollection('runtime').path(`/runtime/${route.params.slug}`).first(),
-)
+const route = useRoute()
+const { locale, locales, setLocale } = useI18n()
+
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+
+const { data: page } = await useAsyncData(`page-${slug.value}`, async () => {
+  const collection = (`runtime_${locale.value}`) as keyof Collections
+
+  const content = await queryCollection(collection).path(slug.value).first()
+
+  return content
+}, { watch: [locale] })
 
 if (!page.value) {
   throw createError({
@@ -17,5 +27,17 @@ useSeoMeta(page.value.seo)
 </script>
 
 <template>
-  <ContentRenderer v-if="page" :value="page" />
+  <section>
+    <div p-4>
+      <button
+        v-for="_l of locales"
+        :key="_l.code"
+        :title="`${_l.name} (${_l.code})`"
+        @click="setLocale(_l.code)"
+      >
+        {{ _l.name }}
+      </button>
+    </div>
+    <ContentRenderer v-if="page" :value="page" />
+  </section>
 </template>
