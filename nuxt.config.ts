@@ -1,7 +1,4 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  css: ['@unocss/reset/tailwind.css'],
-  devtools: { enabled: true },
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -11,11 +8,29 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/i18n',
   ],
+  devtools: { enabled: true },
+  css: ['@unocss/reset/tailwind.css'],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'one-dark-pro',
+          langs: ['c', 'cpp'],
+        },
+      },
+    },
+  },
   future: {
     compatibilityVersion: 4,
   },
+  compatibilityDate: '2024-11-01',
   eslint: {
-    config: { standalone: false },
+    config: {
+      standalone: false,
+      nuxt: {
+        sortConfigKeys: true,
+      },
+    },
   },
   i18n: {
     strategy: 'prefix_except_default',
@@ -25,15 +40,4 @@ export default defineNuxtConfig({
       { code: 'es', name: 'Spanish', language: 'es-CO', dir: 'ltr', file: 'es.json' },
     ],
   },
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          langs: ['c', 'cpp'],
-          theme: 'vitesse-dark',
-        },
-      },
-    },
-  },
-
 })
