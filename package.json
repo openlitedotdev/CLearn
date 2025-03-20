@@ -38,10 +38,11 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "better-sqlite3",
-      "sharp",
       "@parcel/watcher",
-      "esbuild"
+      "better-sqlite3",
+      "esbuild",
+      "sharp",
+      "simple-git-hooks"
     ]
   },
   "simple-git-hooks": {
