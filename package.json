@@ -48,7 +48,7 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue,md,json}": [
+    "*.{js,ts,vue,md,json}": [
       "pnpm run lint",
       "pnpm dlx commitlint --edit"
     ]
