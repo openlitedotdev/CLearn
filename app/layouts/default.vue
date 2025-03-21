@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header>
+    <header class="position-sticky top-0 z-36">
       <TheNav />
     </header>
     <main>

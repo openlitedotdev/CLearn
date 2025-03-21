@@ -1,29 +1,69 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import Input from './Input.vue'
+import Dropwdown from './option/Drowpdown.vue'
 
-const scrollY = ref<number>(0)
+const { locales, setLocale } = useI18n()
 
-// Función para actualizar el valor de scrollY
-const updateScroll = () => {
-  scrollY.value = window.scrollY
-}
-
-// Agregar el event listener cuando el componente se monta
-onMounted(() => {
-  window.addEventListener('scroll', updateScroll)
-  // Inicializar con el valor actual
-  updateScroll()
-})
-
-// Limpiar el event listener cuando el componente se desmonta
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateScroll)
-})
+const nav = [
+  {
+    name: 'Manual',
+    link: '/manual',
+  },
+  {
+    name: 'API Reference',
+    link: '/api-reference',
+  },
+  {
+    name: 'Examples',
+    link: '/examples',
+  },
+  {
+    name: 'Tutorial',
+    link: '/tutorial',
+  },
+]
 </script>
 
 <template>
-  <nav position-sticky top-0 left-0 right-0 bg-blue p-2>
-    NavBar
-    cantidad de scroll {{ scrollY }}
+  <nav flex="~ items-center" bg-white px-4 py-3>
+    <div flex="~ items-center" gap-5>
+      <figure flex="~ items-center" gap-2>
+        <img src="/logo.svg" size-10 alt="Logo">
+        <h2 text-4xl font-black>
+          Learn
+        </h2>
+      </figure>
+      <ul flex="md:~ items-center gap-4" hidden>
+        <li v-for="item in nav" :key="item.name">
+          <NuxtLink
+            p="x4 y2" class="border border-transparent bg-transparent transition-all duration-300"
+            hover="~ bg-blue:50 border-[#233DFF] rounded-md" :to="item.link"
+          >
+            {{
+              item.name
+            }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+    <div flex-auto />
+    <div flex="~ items-center gap-4">
+      <Input />
+      <Dropwdown direction="end">
+        <template #trigger="{ click }">
+          <button border @click="click">
+            lan
+          </button>
+        </template>
+        <div min-w-40 p-4 space-y-2>
+          <button
+            v-for="_l of locales" :key="_l.code" border="~ rounded-md" p="x2 y1" hover="bg-blue:50" w-full
+            bg-transparent :title="`${_l.name} (${_l.code})`" @click="setLocale(_l.code)"
+          >
+            {{ _l.name }}
+          </button>
+        </div>
+      </Dropwdown>
+    </div>
   </nav>
 </template>

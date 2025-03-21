@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@unocss/nuxt',
     '@nuxtjs/i18n',
+    '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
   css: ['@unocss/reset/tailwind.css'],
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
+    detectBrowserLanguage: false,
     locales: [
       { code: 'en', name: 'English', language: 'en-US', dir: 'ltr', file: 'en.json' },
       { code: 'es', name: 'Spanish', language: 'es-CO', dir: 'ltr', file: 'es.json' },
