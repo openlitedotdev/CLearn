@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import Input from './form/Input.vue'
-import Dropwdown from './option/Drowpdown.vue'
-
 const { locales, setLocale } = useI18n()
 
 interface Nav {
@@ -53,8 +50,8 @@ const nav: Nav[] = [
     </div>
     <div flex-auto />
     <div flex="~ items-center gap-4">
-      <Input />
-      <Dropwdown direction="end">
+      <FormInput />
+      <OptionDrowpdown direction="end">
         <template #trigger="{ click }">
           <button border @click="click">
             lan
@@ -68,7 +65,7 @@ const nav: Nav[] = [
             {{ _l.name }}
           </button>
         </div>
-      </Dropwdown>
+      </OptionDrowpdown>
     </div>
   </nav>
 </template>
