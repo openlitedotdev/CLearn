@@ -1,25 +1,30 @@
 <script setup lang="ts">
-import Input from './Input.vue'
+import Input from './form/Input.vue'
 import Dropwdown from './option/Drowpdown.vue'
 
 const { locales, setLocale } = useI18n()
 
-const nav = [
+interface Nav {
+  name: string
+  link: string
+}
+
+const nav: Nav[] = [
   {
     name: 'Manual',
-    link: '/manual',
+    link: '#',
   },
   {
     name: 'API Reference',
-    link: '/api-reference',
+    link: '#',
   },
   {
     name: 'Examples',
-    link: '/examples',
+    link: '#',
   },
   {
     name: 'Tutorial',
-    link: '/tutorial',
+    link: '#',
   },
 ]
 </script>
