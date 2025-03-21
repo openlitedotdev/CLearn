@@ -38,8 +38,11 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     detectBrowserLanguage: false,
     locales: [
-      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr', file: 'en.json' },
-      { code: 'es', name: 'Spanish', language: 'es-CO', dir: 'ltr', file: 'es.json' },
+      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr', file: 'en.json', icon: 'circle-flags:us' },
+      { code: 'es', name: 'Spanish', language: 'es-CO', dir: 'ltr', file: 'es.json', icon: 'circle-flags:co' },
     ],
+  },
+  icon: {
+    size: '24px',
   },
 })
