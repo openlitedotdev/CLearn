@@ -1,11 +1,7 @@
 <script setup lang="ts">
-defineProps({
-  className: {
-    type: String,
-  },
-})
+const attrs = useAttrs()
 </script>
 
 <template>
-  <div animate-pulse bg-gray:20 :class="className" />
+  <div animate-pulse bg-gray:20 v-bind="attrs" />
 </template>
