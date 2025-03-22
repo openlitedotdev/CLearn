@@ -48,7 +48,7 @@ const nav: Nav[] = [
     <div flex="~ items-center gap-3">
       <FormInput />
       <PanelDarkMode />
-      <PanelSelecLang />
+      <PanelSelectLang />
     </div>
   </nav>
 </template>

@@ -18,8 +18,8 @@ const getCurrentLocale = computed(() => {
           <ul class="w-[280px]" grid grid-cols-2 gap-2 px-2 dropdown-content @click="close()">
             <li v-for="_locale of locales" :key="_locale.code">
               <button
-                type="button" hover="bg-faded" w-full dropdown-item :class="{ 'bg-active': getCurrentLocale?.code === _locale.code }"
-                @click="setLocale(_locale.code)"
+                type="button" hover="bg-faded" w-full dropdown-item
+                :class="{ 'bg-active': getCurrentLocale?.code === _locale.code }" @click="setLocale(_locale.code)"
               >
                 <Icon :name="_locale.icon" />
                 <span ml-3>
@@ -31,7 +31,7 @@ const getCurrentLocale = computed(() => {
         </template>
       </Popper>
       <template #fallback>
-        <DisplaySkeleton class-name="size-10 rounded-full" />
+        <DisplaySkeleton size-10 rounded-full />
       </template>
     </ClientOnly>
   </div>
