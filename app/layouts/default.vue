@@ -11,3 +11,10 @@
     </footer>
   </div>
 </template>
+
+<style>
+.dark {
+  background-color: #161618;
+  color: #fff;
+}
+</style>

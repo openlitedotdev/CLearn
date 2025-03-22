@@ -10,7 +10,7 @@ export default defineConfig({
     'dropdown-content': 'my-1 min-w-[120px] rounded bg-white p-0 py-2 text-black shadow dark:bg-black dark:text-white',
     'dropdown-item': 'flex items-center px-4 py-2 hover:bg-faded hover:bg-active',
     'panel': 'relative rounded-md bg-white p-3 shadow dark:bg-[#0e1726]',
-    'center': 'flex items-center justify-center',
+    'flex-items-center': 'flex items-center justify-center',
   },
   presets: [
     presetAttributify(),

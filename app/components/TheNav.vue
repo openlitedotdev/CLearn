@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const { locales, setLocale, locale } = useI18n()
-
 interface Nav {
   name: string
   link: string
@@ -24,10 +22,6 @@ const nav: Nav[] = [
     link: '#',
   },
 ]
-
-const getCurrentLocale = computed(() => {
-  return locales.value.find(i => i.code === locale.value) || locales.value[0]
-})
 </script>
 
 <template>
@@ -54,45 +48,7 @@ const getCurrentLocale = computed(() => {
     <div flex="~ items-center gap-3">
       <FormInput />
       <PanelDarkMode />
-
-      <div dropdown shrink-0>
-        <ClientOnly>
-          <Popper placement="bottom-end" offset-distance="8">
-            <button
-              type="button"
-              h-10 w-10 rounded-full
-              hover="bg-active "
-            >
-              <Icon :name="getCurrentLocale?.icon" />
-            </button>
-
-            <template #content="{ close }">
-              <ul
-                class="w-[280px]"
-                dropdown-content grid grid-cols-2 gap-2
-                @click="close()"
-              >
-                <li
-                  v-for="_locale of locales"
-                  :key="_locale.code"
-                >
-                  <button
-                    type="button"
-                    hover="bg-faded"
-                    dropdown-item
-                    @click="setLocale(_locale.code)"
-                  >
-                    <Icon :name="_locale.icon" />
-                    <span ml-3>
-                      {{ _locale.name }}
-                    </span>
-                  </button>
-                </li>
-              </ul>
-            </template>
-          </Popper>
-        </ClientOnly>
-      </div>
+      <PanelSelectLang />
     </div>
   </nav>
 </template>

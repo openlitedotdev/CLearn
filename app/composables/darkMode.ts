@@ -1,9 +1,18 @@
-import { useDark } from '@vueuse/core'
+import { useColorMode } from '@vueuse/core'
 
-export const isDark = useDark({
-  valueLight: 'light',
+export const isColorMode = useColorMode({
+  emitAuto: true,
+  initialValue: 'auto',
 })
 
-export function toggleDark() {
-  isDark.value = !isDark.value
+type ColorMode = 'dark' | 'light' | 'auto'
+
+export interface DarkModeOption {
+  code: ColorMode
+  icon: string
+  name: string
+}
+
+export function toggleDark(value: ColorMode) {
+  isColorMode.value = value
 }
