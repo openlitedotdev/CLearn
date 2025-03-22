@@ -5,12 +5,8 @@ export const isColorMode = useColorMode({
   initialValue: 'auto',
 })
 
-export function toggleDark() {
-  isColorMode.value = 'dark'
-}
-export function toggleLight() {
-  isColorMode.value = 'light'
-}
-export function toggleSystem() {
-  isColorMode.value = 'auto'
+type ColorMode = 'dark' | 'light' | 'auto'
+
+export function toggleDark(value: ColorMode) {
+  isColorMode.value = value
 }
