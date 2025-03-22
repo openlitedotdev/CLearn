@@ -1,10 +1,4 @@
 <script setup lang="ts">
-interface DarkModeOption {
-  code: 'auto' | 'light' | 'dark'
-  icon: string
-  name: string
-}
-
 const SelectDarkMode: DarkModeOption[] = [
   { code: 'auto', icon: 'solar:laptop-bold', name: 'System' },
   { code: 'light', icon: 'solar:sun-bold', name: 'Light' },
