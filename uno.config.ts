@@ -39,8 +39,7 @@ export default defineConfig({
   presets: [
     presetAttributify(),
     presetTypography(),
-    presetWind3({}),
+    presetWind3(),
   ],
-
   transformers: [transformerDirectives()],
 })
