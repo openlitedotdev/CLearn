@@ -10,16 +10,22 @@ const getCurrentLocale = computed(() => {
   <div dropdown shrink-0>
     <ClientOnly>
       <Popper placement="bottom-end" offset-distance="8">
-        <button type="button" size-10 rounded-full p-2 hover="bg-active">
+        <button type="button" size-10 rounded-full p-2 hover="bg-faded">
           <Icon :name="getCurrentLocale?.icon" />
         </button>
 
         <template #content="{ close }">
-          <ul class="w-[280px]" grid grid-cols-2 gap-2 px-2 dropdown-content @click="close()">
+          <ul
+            class="w-[280px]"
+            grid grid-cols-2 gap-2 px-2 dropdown-content
+            @click="close()"
+          >
             <li v-for="_locale of locales" :key="_locale.code">
               <button
-                type="button" hover="bg-faded" w-full dropdown-item
-                :class="{ 'bg-active': getCurrentLocale?.code === _locale.code }" @click="setLocale(_locale.code)"
+                type="button"
+                w-full dropdown-item
+                :class="{ 'bg-active': getCurrentLocale?.code === _locale.code }"
+                @click="setLocale(_locale.code)"
               >
                 <Icon :name="_locale.icon" />
                 <span ml-3>

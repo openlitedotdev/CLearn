@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Poly Sans';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Poly-Sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poly Sans';
+  font-weight: 800;
+  src: url('/fonts/Poly-Sans-800.woff2') format('woff2');
+}
+
+html,
+body {
+  font-family: 'Poly Sans', sans-serif;
+}
+
+p {
+  @apply max-w-[75ch] text-pretty;
+}
+
+.dark {
+  @apply bg-background text-white;
+}
+
+.cs-column-gap {
+  -moz-column-gap: clamp(4rem, 5vw, 65px);
+  column-gap: clamp(4rem, 5vw, 65px);
+}
