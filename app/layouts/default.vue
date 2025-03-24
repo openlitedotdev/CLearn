@@ -1,20 +1,9 @@
 <template>
   <div>
-    <header class="position-sticky top-0 z-36">
-      <TheNav />
-    </header>
+    <TheNav />
     <main>
       <slot />
     </main>
-    <footer>
-      footer
-    </footer>
+    <Footer />
   </div>
 </template>
-
-<style>
-.dark {
-  background-color: #161618;
-  color: #fff;
-}
-</style>

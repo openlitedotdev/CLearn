@@ -9,6 +9,7 @@
     "source.organizeImports": "never"
   },
 
+  "css.validate": false,
   "mdc.enableFormatting": true,
 
   "[mdc]": {

@@ -10,7 +10,19 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
-  css: ['@unocss/reset/tailwind.css'],
+  app: {
+    head: {
+      title: 'C Learn',
+      titleTemplate: '%s | C Learn',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      ],
+    },
+  },
+  css: [
+    '@unocss/reset/tailwind.css',
+    '@/assets/css/_app.css',
+  ],
   content: {
     build: {
       markdown: {
@@ -32,6 +44,15 @@ export default defineNuxtConfig({
         sortConfigKeys: true,
       },
     },
+  },
+  fonts: {
+    families: [
+      {
+        name: 'Fira Code',
+        weights: [900],
+        provider: 'google',
+      },
+    ],
   },
   i18n: {
     strategy: 'prefix_except_default',

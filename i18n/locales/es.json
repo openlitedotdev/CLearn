@@ -1,3 +1,17 @@
 {
-  "welcome": "Bienvenido"
+  "welcome": "La Documentation de C",
+  "about_project": "Una documentación del lenguaje C no oficial de código abierto con fines lucrativos e inspirar a personas de múltiples países a aprender unos de los lenguajes más importante de la historia en la programación.",
+  "getting_started": "Empezar Ahora",
+  "nav": {
+    "manual": "Manual",
+    "api_reference": "Referencia de API",
+    "examples": "Ejemplos",
+    "tutorial": "Tutorial"
+  },
+  "open_source": "Código Abierto",
+  "description_examples": "Una colección de ejemplos del lenguaje C, que puedes usar como referencia para desarrollar con C o como guía para aprender sobre sus numerosas características. Puedes encontrar más ejemplos en la sección \"Ejemplos\".",
+  "title_help": "Ayuda",
+  "documentation": "Documentación",
+  "community": "Comunidad",
+  "resources": "Recursos"
 }

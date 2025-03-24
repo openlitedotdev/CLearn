@@ -1,3 +1,18 @@
 {
-  "welcome": "Welcome"
+  "welcome": "The C Documentation",
+  "about_project": "An unofficial, open-source C language documentation for profit, designed to inspire people from multiple countries to learn one of the most important programming languages in history.",
+  "getting_started": "Getting started",
+  "nav": {
+    "manual": "Manual",
+    "api_reference": "API Reference",
+    "examples": "Examples",
+    "tutorial": "Tutorial"
+  },
+  "open_source": "Open Source",
+  "description_examples": "A collection of C language examples, which you can use as a reference for developing in C or as a guide to learning about its many features. You can find more examples in the \"Examples\" section.",
+  "title_help": "Help",
+  "description_help": "The description Help",
+  "documentation": "Documentation",
+  "community": "Community",
+  "resources": "Resources"
 }
