@@ -9,7 +9,7 @@
       mx-auto max-w-5xl
     >
       <section class="min-w-[170px]">
-        <h3 mb-4 text-lg font-bold font-fira-code>
+        <h3 mb-4 text-lg font-semibold>
           {{ $t('documentation') }}
         </h3>
         <ul flex flex-col gap-3>
@@ -25,7 +25,7 @@
       </section>
 
       <section class="min-w-[170px]">
-        <h3 mb-4 text-lg font-bold font-fira-code>
+        <h3 mb-4 text-lg font-semibold>
           {{ $t('community') }}
         </h3>
         <ul flex flex-col gap-3>
@@ -41,7 +41,7 @@
       </section>
 
       <section class="min-w-[170px]">
-        <h3 mb-4 text-lg font-bold font-fira-code>
+        <h3 mb-4 text-lg font-semibold>
           {{ $t('resources') }}
         </h3>
         <ul flex flex-col gap-3>
@@ -58,7 +58,7 @@
 
       <form action="#" class="min-w-[170px]" self-center space-y-3>
         <div text-sm>
-          <h4 mb-3 font-bold font-fira-code>
+          <h4 mb-3 font-semibold>
             Subscribe to our newsletter
           </h4>
           <p>Stay updated on new releases and features, guides, and community updates.</p>

@@ -1,7 +1,7 @@
 <template>
   <section class="h-[266px]" w-full flex-justify-between>
     <article space-y-5>
-      <h2 text-4xl font-bold font-fira-code>
+      <h2 text-4xl font-semibold>
         {{ $t('welcome') }}
       </h2>
       <p>

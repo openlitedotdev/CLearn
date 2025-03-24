@@ -2,7 +2,15 @@
   font-family: 'Poly Sans';
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Poly-Sans-400.woff2') format('woff2');
+  font-style: normal;
+  src: url('/fonts/Poly-Sans-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poly Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/fonts/Poly-Sans-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -14,6 +22,17 @@
 html,
 body {
   font-family: 'Poly Sans', sans-serif;
+  @apply text-foreground dark:text-foreground-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: 'ss02';
+  @apply text-black dark:text-white;
 }
 
 p {
@@ -21,7 +40,7 @@ p {
 }
 
 .dark {
-  @apply bg-background text-white;
+  @apply bg-background;
 }
 
 .cs-column-gap {
