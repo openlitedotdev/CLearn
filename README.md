@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/CPresentation.png" alt="The C Logo">
+  <img src="./public/CLogo.png" alt="The C Logo">
 </p>
 
 <h1 align="center">The C documentation</h1>
