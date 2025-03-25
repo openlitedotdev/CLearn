@@ -1,5 +1,9 @@
 <template>
-  <header class="position-sticky top-0 z-36">
+  <header
+    position-sticky top-0 z-20
+    class="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60"
+    dark="bg-background/95 supports-[backdrop-filter]:bg-background/60"
+  >
     <nav flex-items-center px-4 py-3>
       <div flex-items-center gap-12>
         <NuxtLink to="/">
