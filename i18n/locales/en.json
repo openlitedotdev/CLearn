@@ -10,9 +10,17 @@
   },
   "open_source": "Open Source",
   "description_examples": "A collection of C language examples, which you can use as a reference for developing in C or as a guide to learning about its many features. You can find more examples in the \"Examples\" section.",
+  "description_api_reference": "C API Reference Documentation, Explore the APIs available in C in the \"API Reference\" section.",
   "title_help": "Help",
   "description_help": "The description Help",
   "documentation": "Documentation",
   "community": "Community",
-  "resources": "Resources"
+  "resources": "Resources",
+  "help": {
+    "title_connect_community": "Connect with our community",
+    "title_help_documentaton": "Help us improve the documentation!",
+    "description_connect_community": "Get help from the Open Lite community.",
+    "description_help_documentaton": "If you find any errors in the reading or code examples, please help us correct and improve the documentation."
+  },
+  "learn_more": "Learn more"
 }

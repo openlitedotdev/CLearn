@@ -10,8 +10,16 @@
   },
   "open_source": "Código Abierto",
   "description_examples": "Una colección de ejemplos del lenguaje C, que puedes usar como referencia para desarrollar con C o como guía para aprender sobre sus numerosas características. Puedes encontrar más ejemplos en la sección \"Ejemplos\".",
+  "description_api_reference": "Documentación de referencia de las API de C, Explore las API disponibles en C en la sección de referencia de API.",
   "title_help": "Ayuda",
   "documentation": "Documentación",
   "community": "Comunidad",
-  "resources": "Recursos"
+  "resources": "Recursos",
+  "help": {
+    "title_connect_community": "Conéctate con nuestra comunidad",
+    "title_help_documentaton": "¡Ayúdanos a mejorar la documentación!",
+    "description_connect_community": "Obtenga ayuda de la comunidad Open Lite.",
+    "description_help_documentaton": "Si encuentras errores de lectura o de ejemplos de códigos, por favor  puedes ayudarnos a corregir y mejorar la documentación."
+  },
+  "learn_more": "Aprender más"
 }
