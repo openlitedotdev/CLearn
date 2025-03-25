@@ -9,13 +9,13 @@ import {
 export default defineConfig({
   shortcuts: {
     'border-base': 'border-gray-200 dark:border-gray-800',
-    'bg-active': 'bg-gray:10',
+    'bg-active': 'bg-gray:20',
     'bg-faded': 'bg-gray:5',
     'bg-code': 'bg-gray/5',
     'columns-title': 'mb-4 text-2xl font-semibold underline underline-primary underline-offset-8',
     'btn': 'rounded flex-items-center gap-2 px-3 py-2 disabled:pointer-events-none disabled:op30!',
     'dropdown': 'relative',
-    'dropdown-content': 'my-1 min-w-[120px] rounded bg-white p-0 py-2 text-black shadow dark:bg-black dark:text-white',
+    'dropdown-content': 'my-1 min-w-[120px] rounded bg-white p-0 py-2 text-black shadow dark:shadow-gray:20 dark:bg-black dark:text-white',
     'dropdown-item': 'flex-items-center px-4 py-2 hover:bg-faded hover:bg-active',
     'flex-items-center': 'flex items-center',
     'flex-justify-center': 'flex-items-center justify-center',
